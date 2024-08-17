@@ -37,6 +37,34 @@ impl WindowInfo {
         }
     }
 
+    pub fn get_id(&self) -> u32 {
+        return self.id.clone();
+    }
+
+    pub fn get_title(&self) -> String {
+        return self.title.clone();
+    }
+
+    pub fn get_process_id(&self) -> u32 {
+        return self.info.get_process_id();
+    }
+
+    pub fn get_path(&self) -> String {
+        return self.info.get_path();
+    }
+
+    pub fn get_name(&self) -> String {
+        return self.info.get_name();
+    }
+
+    pub fn get_exec_name(&self) -> String {
+        return self.info.get_exec_name();
+    }
+
+    pub fn get_url(&self) -> String {
+        return self.url.clone();
+    }
+    
     pub fn compare(&self, other: &WindowInfo) -> bool {
         return self.id == other.id
             && self.os == other.os

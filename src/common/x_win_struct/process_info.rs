@@ -27,4 +27,20 @@ impl ProcessInfo {
             && self.name == other.name
             && self.exec_name == other.exec_name
     }
+
+    pub fn get_process_id(&self) -> u32 {
+        return self.process_id.clone();
+    }
+
+    pub fn get_path(&self) -> String {
+        return self.path.clone();
+    }
+
+    pub fn get_name(&self) -> String {
+        return self.name.clone();
+    }
+
+    pub fn get_exec_name(&self) -> String {
+        return self.exec_name.clone();
+    }
 }
