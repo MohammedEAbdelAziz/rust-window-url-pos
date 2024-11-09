@@ -1185,6 +1185,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "rust-window-url-pos"
+version = "2.0.0"
+dependencies = [
+ "base64",
+ "cocoa",
+ "cocoa-foundation",
+ "core-foundation",
+ "core-foundation-sys",
+ "core-graphics",
+ "image",
+ "libc",
+ "objc",
+ "once_cell",
+ "png",
+ "serde_json",
+ "windows",
+ "x11",
+ "xcb",
+ "zbus",
+]
+
+[[package]]
 name = "rustix"
 version = "0.37.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1785,28 +1807,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "68a9bda4691f099d435ad181000724da8e5899daa10713c2d432552b9ccd3a6f"
 dependencies = [
  "memchr",
-]
-
-[[package]]
-name = "x-win"
-version = "1.10.2"
-dependencies = [
- "base64",
- "cocoa",
- "cocoa-foundation",
- "core-foundation",
- "core-foundation-sys",
- "core-graphics",
- "image",
- "libc",
- "objc",
- "once_cell",
- "png",
- "serde_json",
- "windows",
- "x11",
- "xcb",
- "zbus",
 ]
 
 [[package]]

@@ -13,7 +13,6 @@ pub struct WindowInfo {
     pub position: WindowPosition,
     pub info: ProcessInfo,
     pub usage: UsageInfo,
-    pub url: String,
 }
 
 impl WindowInfo {
@@ -24,7 +23,6 @@ impl WindowInfo {
         position: WindowPosition,
         info: ProcessInfo,
         usage: UsageInfo,
-        url: String,
     ) -> Self {
         Self {
             id,
@@ -33,7 +31,6 @@ impl WindowInfo {
             position,
             info,
             usage,
-            url,
         }
     }
 
@@ -61,14 +58,10 @@ impl WindowInfo {
         return self.info.get_exec_name();
     }
 
-    pub fn get_url(&self) -> String {
-        return self.url.clone();
-    }
     
     pub fn compare(&self, other: &WindowInfo) -> bool {
         return self.id == other.id
             && self.os == other.os
             && self.title == other.title
-            && self.url == other.url
     }
 }

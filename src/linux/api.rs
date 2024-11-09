@@ -54,6 +54,14 @@ impl Api for LinuxAPI {
   }
 }
 
+fn get_browser_url(&self, window_info: &WindowInfo) -> String {
+  if is_wayland_desktop() {
+    (WaylandApi {}).get_browser_url(window_info)
+  } else {
+    (X11Api {}).get_browser_url(window_info)
+  }
+}
+
 impl APIGnome for LinuxAPI {
   fn install_extension() -> bool {
     if is_wayland_desktop() {
